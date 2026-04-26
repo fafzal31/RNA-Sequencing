@@ -106,8 +106,12 @@ A symmetric distance matrix showing pairwise similarity between samples. Samples
 **Dispersion Estimates (`dispersion_estimates.png`)**
 Black dots = per-gene maximum likelihood dispersion estimates. Red line = fitted mean-dispersion trend. Blue dots = final shrunken (empirical Bayes) estimates used for testing. The dispersion decreases as mean expression increases, a typical and expected pattern in RNA-Seq data. Well-fitting dispersion estimates indicate reliable differential expression calls.
 
+![Dispersion Estimates](03_DESeq2_Analysis/dispersion_estimates.png)
+
 **MA Plot (`MA_plot_treated_vs_untreated.png`)**
 X-axis: mean normalized counts (log10 scale). Y-axis: log2 fold change. Blue dots = statistically significant DEGs (adjusted p-value < 0.05). The plot shows a large number of significant genes across a wide range of expression levels, with fold changes reaching up to ±4 log2. Genes with very low counts (left side) tend to show more scatter, which is expected.
+
+![MA Plot](03_DESeq2_Analysis/MA_plot_treated_vs_untreated.png)
 
 **p-value Histogram (`DESeq2_full_report.pdf`)**
 A roughly uniform distribution of p-values with a sharp peak near 0 confirms the presence of many true positives (DEGs). This is a hallmark of a successful differential expression experiment.
@@ -131,7 +135,11 @@ Pathview maps DEG fold changes onto KEGG metabolic and signaling pathway diagram
 
 **Glycolysis/Gluconeogenesis (dme00010):** Several enzymes in the glycolytic pathway show differential expression (red = upregulated in treated). Notable upregulation is observed in reactions involving glucose-6-phosphate and pyruvate metabolism, suggesting altered energy metabolism upon *pasilla* knockdown.
 
+![Glycolysis / Gluconeogenesis Pathway](04_KEGG_Pathways/dme00010_Glycolysis_Gluconeogenesis.png)
+
 **Spliceosome (dme03040):** *Pasilla* is an RNA-binding splicing regulator. The spliceosome pathway map shows differential expression among spliceosomal components (particularly U1/U2 snRNP-associated proteins shown in red/green), consistent with the known role of *pasilla* in alternative splicing regulation.
+
+![Spliceosome Pathway](04_KEGG_Pathways/dme03040_Spliceosome.png)
 
 ---
 
